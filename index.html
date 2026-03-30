@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog simples mobile friendly com HTML, CSS e JS puro.">
+  <title>Teste Blog Mobile Friendly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- topo -->
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="#home">Teste Blog</a>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        ☰
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Início</a>
+        <a href="#posts">Posts</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- hero -->
+    <section class="hero">
+      <div class="container hero-box">
+        <p class="chip">HTML + CSS + JS puro</p>
+        <h1>Um blog simples, leve e feito para celular.</h1>
+        <p class="hero-text">
+          Base pronta para estudar front-end com layout responsivo, cards e interação sem biblioteca.
+        </p>
+        <a class="cta" href="#posts">Ver posts</a>
+      </div>
+    </section>
+
+    <!-- busca -->
+    <section class="search-wrap">
+      <div class="container">
+        <div class="search-box">
+          <label for="searchInput">Buscar post</label>
+          <input id="searchInput" type="text" placeholder="Ex.: HTML, CSS, JS">
+          <p id="searchStatus">3 posts encontrados.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- posts -->
+    <section class="posts" id="posts">
+      <div class="container">
+        <div class="section-head">
+          <h2>Últimos posts</h2>
+          <p>Exemplos simples para iniciar o projeto.</p>
+        </div>
+
+        <div class="grid" id="postList">
+          <article class="card" data-search="html estrutura semantica base tags">
+            <div class="card-top top-html">
+              <span>HTML</span>
+            </div>
+            <div class="card-body">
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">Base</span>
+              </div>
+              <h3>Como montar uma estrutura HTML semântica</h3>
+              <p>Veja um começo simples com header, main, section, article e footer.</p>
+              <div class="card-actions">
+                <a class="more" href="#sobre">Ler mais</a>
+                <button class="like-btn" type="button" data-liked="false">
+                  Curtir <span class="like-count">0</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-search="css mobile first responsivo layout grid">
+            <div class="card-top top-css">
+              <span>CSS</span>
+            </div>
+            <div class="card-body">
+              <div class="tags">
+                <span class="tag">CSS</span>
+                <span class="tag">Mobile</span>
+              </div>
+              <h3>CSS mobile first na prática</h3>
+              <p>Comece pelo celular e amplie o layout com media queries.</p>
+              <div class="card-actions">
+                <a class="more" href="#sobre">Ler mais</a>
+                <button class="like-btn" type="button" data-liked="false">
+                  Curtir <span class="like-count">0</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-search="javascript menu busca clique interacao">
+            <div class="card-top top-js">
+              <span>JS</span>
+            </div>
+            <div class="card-body">
+              <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">UI</span>
+              </div>
+              <h3>Interações leves com JavaScript puro</h3>
+              <p>Menu mobile, busca local e botão de curtir sem dependências externas.</p>
+              <div class="card-actions">
+                <a class="more" href="#sobre">Ler mais</a>
+                <button class="like-btn" type="button" data-liked="false">
+                  Curtir <span class="like-count">0</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="container">
+        <div class="about-box">
+          <h2>Sobre o projeto</h2>
+          <p>Este repositório mostra uma evolução simples, com commits curtos e arquivos fáceis de manter.</p>
+          <p>Depois você pode adicionar páginas internas, posts reais e integração com API.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Teste Blog Mobile Friendly.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
